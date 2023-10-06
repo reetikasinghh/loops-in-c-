@@ -1,9 +1,4 @@
-
-
-/*
-Part 1
-Calculator program using Switch-Case
-*/
+/* CALCULATER PROGRAM USING SWITCH CASE */
 #include<iostream>
 using namespace std;
 int main()
