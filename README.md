@@ -1,37 +1,5 @@
-Program Aim:
-The aim of this program is to determine and display the sizes (in bytes) of different data types in C++, including integers, floats, doubles, characters, and booleans.
-
-Program Theory:
-
-#include<iostream>: This line includes the necessary header file <iostream> to enable input and output operations in the program.
-
-int main(): This is the entry point of the program. All C++ programs start execution from the main function.
-
-using namespace std;: This line allows us to use the standard C++ library (std) without explicitly specifying it in the code. It simplifies the code by eliminating the need to prefix elements from the standard library with "std::".
-
-Declaration of variables:
-
-int myintvar;: Declares an integer variable to store whole numbers.
-float myfloatvar;: Declares a float variable to store numbers with decimals.
-double mydoublevar;: Declares a double variable to store larger numbers with decimals.
-char mycharvar;: Declares a character variable to store single letters or symbols.
-bool myboolvar;: Declares a boolean variable to store true or false values.
-cout and cin statements: These statements are used to display prompts to the user and read values from the user for each variable.
-
-Displaying the sizes of data types: The program uses the sizeof operator to determine and display the sizes of data types in bytes.
-
-return 0;: This statement indicates the successful termination of the program with a return value of 0.
-
-Program Algorithm:
-
-Declare variables for each data type: integer, float, double, character, and boolean.
-Prompt the user to enter values for each data type.
-Read the user's input for each variable.
-Use the sizeof operator to determine and display the size of each data type in bytes.
-Program Conclusion:
-This C++ program demonstrates how to determine and display the sizes of different data types in bytes. It prompts the user to enter values for each data type and then calculates and displays the size of each data type. The size of a char variable is always 1 byte, while the sizes of other data types may vary depending on the system and compiler used.
-Program Aim:
-The aim of this program is to print the numbers from 1 to 50, each on a new line, using a for loop.
+1)Program Aim:
+The aim of this program is to print the first 50 natural numbers in ascending order using a loop.
 
 Program Theory:
 
@@ -39,24 +7,25 @@ Program Theory:
 
 int main(): This is the entry point of the program. All C++ programs start execution from the main function.
 
-Initialization of a loop variable: for (int c = 1; c <= 50; c++) initializes an integer variable c to 1. It then specifies a for loop that will execute as long as c is less than or equal to 50. The loop will increment c by 1 in each iteration.
+Looping:
 
-std::cout << c << std::endl;: Inside the loop, this statement outputs the current value of c followed by a newline character (std::endl). This causes each number to be printed on a new line.
-
+The program uses a for loop to iterate through the numbers from 1 to 50.
+The loop counter variable 'c' is initialized to 1 and incremented in each iteration.
+Inside the loop, the program uses std::cout to print the current value of 'c' followed by a newline to display each number on a separate line.
 return 0;: This statement indicates the successful termination of the program with a return value of 0.
 
 Program Algorithm:
 
-Initialize an integer variable c to 1.
-Execute a for loop as long as c is less than or equal to 50.
-Inside the loop, print the current value of c followed by a newline.
-Increment c by 1 in each iteration.
+Initialize a variable 'c' to 1.
+Start a for loop that runs while 'c' is less than or equal to 50.
+Inside the loop, print the current value of 'c' followed by a newline.
+Increment 'c' in each iteration.
 Terminate the program.
 Program Conclusion:
-This C++ program uses a for loop to iterate through the numbers from 1 to 50 and prints each number on a new line. It serves as a simple example of how loops can be used to perform repetitive tasks in programming.
+This C++ program uses a for loop to print the first 50 natural numbers in ascending order. It starts from 1 and goes up to 50, printing each number on a separate line. This program serves as a basic example of using loops for repetitive tasks. 
 
-Program Aim:
-The aim of this program is to print a number triangle where each row contains a repeated number based on the row number.
+2)Program Aim:
+The aim of this program is to print the message "THIS IS MY FIRST PROGRAM" followed by a number (from 1 to 10) to the console ten times.
 
 Program Theory:
 
@@ -64,26 +33,66 @@ Program Theory:
 
 int main(): This is the entry point of the program. All C++ programs start execution from the main function.
 
+Declaration of variables:
+
+int i;: Declares an integer variable 'i' to be used as a loop counter.
+Looping:
+
+The program uses a for loop to iterate from 1 to 10.
+Inside the loop, the program uses std::cout to print the message "THIS IS MY FIRST PROGRAM :" followed by the current value of 'i' and a newline.
+'i' is incremented in each iteration.
+return 0;: This statement indicates the successful termination of the program with a return value of 0.
+
+Program Algorithm:
+
+Declare an integer variable 'i' to use as a loop counter.
+Start a for loop with 'i' initialized to 1 and running while 'i' is less than or equal to 10.
+Inside the loop, print "THIS IS MY FIRST PROGRAM : " followed by the current value of 'i' and a newline.
+Increment 'i' in each iteration.
+Terminate the program.
+Program Conclusion:
+This C++ program uses a for loop to repeatedly print a message along with a number from 1 to 10. It demonstrates how loops can be used to perform repetitive tasks and is a basic example of using a for loop. 
+
+3)
+Program Aim:
+The aim of this program is to print a number triangle where each row contains a sequence of numbers increasing from 0 up to the row number.
+
+Program Theory:
+
+#include <iostream>: This line includes the necessary header file <iostream> to enable input and output operations in the program.
+
 using namespace std;: This line allows us to use the standard C++ library (std) without explicitly specifying it in the code. It simplifies the code by eliminating the need to prefix elements from the standard library with "std::".
 
 Declaration of variables:
 
-int k, i, j;: Declares integer variables to control the number of rows (k), the current row number (i), and the inner loop counter (j).
-cout and cin statements: These statements are used to display a prompt to the user and read the number of rows for the triangle.
+int k, i, j;: Declares integer variables 'k' (for the number of rows), 'i' (for the row counter), and 'j' (for the column counter).
+int main(): This is the entry point of the program. All C++ programs start execution from the main function.
 
-Nested loops: There are two nested loops used:
+User input:
 
-The outer loop (for (i = 1; i <= k; i++)) controls the number of rows in the triangle.
-The inner loop (for (j = 0; j < i; j++)) prints the value of i (i times) on each row.
-cout << endl;: This statement moves to the next line to start a new row in the triangle.
+The program prompts the user to enter the number of rows ('k') for the triangle.
+Looping:
+
+The program uses nested for loops to print the number triangle.
+The outer loop (controlled by 'i') runs from 0 to 'k-1', representing each row of the triangle.
+The inner loop (controlled by 'j') runs from 0 to 'i-1', printing the value of 'i' 'j' times.
+cout << i;: Inside the inner loop, the program prints the value of 'i' (the row number) in each column.
+
+cout << endl;: After each row is printed, the program moves to the next line to start a new row.
 
 return 0;: This statement indicates the successful termination of the program with a return value of 0.
 
 Program Algorithm:
 
-Prompt the user to enter the number of rows (k) for the triangle.
-Use an outer loop to iterate from 1 to k, controlling the number of rows.
-Inside the outer loop, use an inner loop to iterate from 0 to i-1, where i is the current row number. This inner loop prints the value of i on the row.
-After the inner loop completes, move to the next line to start a new row.
-Repeat steps 3-4 until all rows are printed.
-Terminate the program.-
+Prompt the user to enter the number of rows for the number triangle ('k').
+Start an outer for loop with 'i' initialized to 0 and running while 'i' is less than 'k'.
+Inside the outer loop, start an inner for loop with 'j' initialized to 0 and running while 'j' is less than 'i'.
+Inside the inner loop, print the value of 'i'.
+Move to the next line after the inner loop to start a new row.
+Increment 'i' in each iteration of the outer loop.
+Terminate the program.
+Program Conclusion:
+This C++ program takes a user-defined number of rows and prints a number triangle where each row contains a sequence of numbers from 0 to the row number. It uses nested for loops to control the printing of numbers in each row. The program serves as an example of using nested loops for pattern printing.
+
+Example Output (for k=5): 
+![image](https://github.com/reetikasinghh/loops-in-c-/assets/139485681/34c44873-25c3-4aff-bd2c-71da265e0fce)
